@@ -1,0 +1,39 @@
+body {
+    background-color: #1A258D;
+    align-items: center;
+}
+
+h2 {
+    font-style: italic;
+}
+
+#list-container {
+    background: #1A258D;
+    border: 5px;
+    border-color: #FF4600;
+    border-radius: 3px;
+    /* margin: 5% 15%; */
+    width: inherit;
+    height: inherit;
+    /* scrollbar-arrow-color: #1A258D; */
+    /* align-items: center; */
+
+}
+
+/* #community-card p {
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+#community-card {
+    background: #FFFFFF;
+    border: 1px;
+    border-radius: 8px;
+    width: 60%;
+    height: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+} */

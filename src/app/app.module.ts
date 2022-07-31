@@ -5,16 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommunitiesComponent } from './communities/communities.component';
 import { PostsComponent } from './posts/posts.component';
-import { RegisterFormComponent } from './register-form/register-form.component';
 import { PostComponent } from './post/post.component';
+import { CommunityComponent } from './community-view/community/community.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommunitiesComponent,
     PostsComponent,
-    RegisterFormComponent,
-    PostComponent
+    PostComponent,
+    CommunityComponent
   ],
   imports: [
     BrowserModule,
