@@ -1,0 +1,19 @@
+
+#community-card p {
+    /* width: 100%; */
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+#community-card {
+    background: #FFFFFF;
+    border: 1px;
+    border-radius: 8px;
+    width: 60%;
+    height: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

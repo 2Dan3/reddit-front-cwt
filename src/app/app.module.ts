@@ -7,6 +7,7 @@ import { CommunitiesComponent } from './communities/communities.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostComponent } from './post/post.component';
 import { CommunityComponent } from './community-view/community/community.component';
+import { CommunityCardComponent } from './communities/community-card/community-card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CommunityComponent } from './community-view/community/community.compone
     CommunitiesComponent,
     PostsComponent,
     PostComponent,
-    CommunityComponent
+    CommunityComponent,
+    CommunityCardComponent
   ],
   imports: [
     BrowserModule,

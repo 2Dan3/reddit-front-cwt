@@ -1,1 +1,7 @@
-<p>posts works!</p>
+<!-- <p>posts works!</p> -->
+
+<h2>Posts:</h2>
+
+<div id="list-container">
+    <app-post [post]="p" *ngFor="let p of posts"></app-post>
+</div>
