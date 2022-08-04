@@ -18,4 +18,8 @@ export class CommunityCardComponent implements OnInit {
     
   }
 
+  // toCommunity(community_id: string|number) {
+    
+  // }
+
 }

@@ -8,8 +8,10 @@ h2 {
 }
 
 #list-container {
-    background: #1A258D;
+    background-image: linear-gradient(to bottom right, #1A258D, #9599b6);
+    /* background: #1A258D; */
     border-radius: 3px;
     width: inherit;
     height: auto;
 }
+

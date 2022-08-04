@@ -16,17 +16,21 @@
     text-decoration-color: #FFFFFF;
 }
 
-#community-card p :hover {
-    text-decoration-color: #000000;
-}
-
 #community-card {
+    background-image: linear-gradient(to bottom right, #fc581c, #fd9d5d);
 
-    background: #fc581c;
+    /* background: #fc581c; */
     width: 70%;
     /* border-radius: 4px; */
     border: 2px ridge #FFFFFF;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+}
+
+#community-card:hover {
+    border: 4px solid #ffffffd5;
+    transition: all .4s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
 }

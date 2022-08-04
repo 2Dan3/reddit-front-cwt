@@ -3,5 +3,5 @@
 <h2>Posts:</h2>
 
 <div id="list-container">
-    <app-post-card [post]="p" *ngFor="let p of posts"></app-post-card>
+    <app-post-card [post]="p" *ngFor="let p of posts" routerLink="/post/{{p._id}}"></app-post-card>
 </div>

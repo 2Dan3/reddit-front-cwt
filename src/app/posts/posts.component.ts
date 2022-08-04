@@ -21,7 +21,6 @@ export class PostsComponent implements OnInit {
 
   ngOnInit(): void {
     this.posts = this.postService.getAll(this.community_id);
-
   }
 
 }
