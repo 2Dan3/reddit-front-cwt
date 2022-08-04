@@ -5,18 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommunitiesComponent } from './communities/communities.component';
 import { PostsComponent } from './posts/posts.component';
-import { PostComponent } from './post/post.component';
 import { CommunityComponent } from './community-view/community/community.component';
 import { CommunityCardComponent } from './communities/community-card/community-card.component';
+import { PostCardComponent } from './post/post-card/post-card.component';
+import { PostViewComponent } from './post/post-view/post-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommunitiesComponent,
-    PostsComponent,
-    PostComponent,
     CommunityComponent,
-    CommunityCardComponent
+    CommunityCardComponent,
+    PostsComponent,
+    PostViewComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule,
