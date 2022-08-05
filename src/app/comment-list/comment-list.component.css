@@ -1,3 +1,32 @@
-p {
-    border: 2px orangered solid;
+#list-container{
+    /* background-image: linear-gradient(to bottom right, #fc581c, #ffc59e); */
+    /* background-image: linear-gradient(to bottom right, #1A258D, #000000); */
+    background-image: radial-gradient(#1A258D, #0a00306b);
+    border: 2px #ffffff solid;
+    border-radius: 8px;
+    width: 97%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#create-btn{
+    height: auto;
+    width: 97%;
+    border: 2px #FFFFFF groove;
+    border-radius: 2px;
+    margin-top: 10%;
+    margin-left: 1%;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: larger;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#create-btn:hover{
+    font-size: large;
+    cursor: pointer;
+    background-image: radial-gradient(#2f42eb, #0a00305e);
+    transition: all .4s ease-in-out;
 }

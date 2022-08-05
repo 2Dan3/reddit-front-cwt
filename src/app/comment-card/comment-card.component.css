@@ -1,0 +1,9 @@
+#comment-card{
+    background-image: linear-gradient(to bottom right, #ffffff, #e6e6e6);
+
+    border-radius: 3px;
+    width: 95%;
+    height: auto;
+    margin-left: 1%;
+    margin-right: auto;
+}

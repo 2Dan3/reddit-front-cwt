@@ -15,6 +15,7 @@ export class PostCardComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("Current Post: " + this.post._id + this.post.author_display_name + this.post.creation_date + this.post.text + this.post.title);
+    
   }
 
 }

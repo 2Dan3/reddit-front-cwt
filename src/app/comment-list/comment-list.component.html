@@ -1,3 +1,5 @@
-<p>comment-list works for Post w/ ID: {{this.post_id}}!</p>
+<p id="create-btn">make a comment!</p>
 
-<app-comment-card [_comment]="comment" *ngFor="let comment of comments"></app-comment-card>
+<div id="list-container">
+    <app-comment-card [_comment]="comment" *ngFor="let comment of comments"></app-comment-card>
+</div>

@@ -1,5 +1,7 @@
 <p>post-view details works for Post ID: {{post._id}}!</p>
 
-<app-post-card [post]="this.post"></app-post-card>
+<div id="container">
+    <app-post-card [post]="this.post"></app-post-card>
 
-<app-comment-list [post_id]="this.post._id"></app-comment-list>
+    <app-comment-list [post_id]="this.post._id"></app-comment-list>
+</div>

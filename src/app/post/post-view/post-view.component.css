@@ -1,0 +1,7 @@
+#container{
+    /* background-image: linear-gradient(to bottom right, #1A258D, #000000); */
+    background-image: radial-gradient(#17258d, #1A258D);
+
+    width: 70%;
+    height: auto;
+}
