@@ -16,7 +16,7 @@ export class KarmaComponent implements OnInit {
 
   ngOnInit(): void {
     // TODO*: delete - temporary mock-data:
-    this.upvote_count = 90;
+    this.upvote_count = 380;
     this.downvote_count = 23;
   }
 

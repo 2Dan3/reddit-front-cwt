@@ -1,20 +1,25 @@
-body{
-    /* vertical-align: middle; */
-    width: auto;
-    height: auto;
-    /* width: ; */
-    /* display: inline-block; */ /*i u comment-card setovati*/
-    margin-left: 1%;
-    margin-right: 3%;
+#karma-wrapper{
+    margin: auto;
+    width: fit-content;
+    display: inline-block;
 }
 
 img{
-    width: 72px;
+    /* GOES W/ MARGINS:AUTO display: block; */
+    width: 55%;
+    color: #FFFFFF;
+    /* GOES W/ DISPLAY:BLOCK margin-left: auto;
+    margin-right: auto; */
+}
+
+img:hover{
+    cursor: pointer;
 }
 
 p{
+    width: fit-content;
     font-size: 22px;
     color: #FFFFFF;
     font-weight: bolder;
-    width: 72px;
+    /* GOES W/ DISPLAY:BLOCK margin: auto; */
 }
