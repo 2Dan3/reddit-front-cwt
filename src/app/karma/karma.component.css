@@ -1,0 +1,20 @@
+body{
+    /* vertical-align: middle; */
+    width: auto;
+    height: auto;
+    /* width: ; */
+    /* display: inline-block; */ /*i u comment-card setovati*/
+    margin-left: 1%;
+    margin-right: 3%;
+}
+
+img{
+    width: 72px;
+}
+
+p{
+    font-size: 22px;
+    color: #FFFFFF;
+    font-weight: bolder;
+    width: 72px;
+}

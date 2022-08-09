@@ -11,6 +11,8 @@ import { PostCardComponent } from './post/post-card/post-card.component';
 import { PostViewComponent } from './post/post-view/post-view.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
 import { CommentCardComponent } from './comment-card/comment-card.component';
+import { ProfileComponent } from './profile/profile.component';
+import { KarmaComponent } from './karma/karma.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CommentCardComponent } from './comment-card/comment-card.component';
     PostViewComponent,
     PostCardComponent,
     CommentListComponent,
-    CommentCardComponent
+    CommentCardComponent,
+    ProfileComponent,
+    KarmaComponent
   ],
   imports: [
     BrowserModule,

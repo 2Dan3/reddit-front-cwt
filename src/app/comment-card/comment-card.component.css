@@ -1,9 +1,14 @@
+/* #wrapper{
+    display: inline;
+} */
+
 #comment-card{
     background-image: linear-gradient(to bottom right, #ffffff, #e6e6e6);
 
     border-radius: 3px;
-    width: 95%;
+    width: 85%;
     height: auto;
-    margin-left: 1%;
-    margin-right: auto;
+    margin-left: auto;
+    margin-right: 1%;
+    /* display: inline-block; */ /*i u karmi setovati*/
 }

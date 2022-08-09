@@ -1,0 +1,15 @@
+#container{
+    background-image: radial-gradient(#17258d, #1A258D);
+    border-radius: 3px;
+}
+
+#img-container{
+    border: 2px #FFFFFF solid;
+    border-radius: 30px;
+    /* padding: ; */
+}
+
+#img-container:hover{
+    border-color: #fc581c;
+    cursor: pointer;
+}
