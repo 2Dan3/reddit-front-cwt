@@ -1,3 +1,6 @@
+#community-overview-wrapper{
+    width: 100%;
+}
 
 #community-card p {
     /* width: 100%; */
@@ -16,4 +19,9 @@
     margin-bottom: 35px;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.flair-list-wrapper, .posts-list-wrapper{
+    /* display: inline-block; */
+    width: 100%;
 }

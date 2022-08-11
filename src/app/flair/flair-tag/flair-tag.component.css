@@ -1,0 +1,16 @@
+#flair-card{
+    background-image: radial-gradient(#1A258D, #9599b6);
+    color: #FFFFFF;
+
+    border: 2px solid #1A258D;
+    border-radius: 8px;
+    font-style: italic;
+    width: fit-content;
+    margin: 8px;
+}
+
+#flair-card p{
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}

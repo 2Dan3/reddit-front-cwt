@@ -13,6 +13,8 @@ import { CommentListComponent } from './comment-list/comment-list.component';
 import { CommentCardComponent } from './comment-card/comment-card.component';
 import { ProfileComponent } from './profile/profile.component';
 import { KarmaComponent } from './karma/karma.component';
+import { FlairListComponent } from './flair/flair-list/flair-list.component';
+import { FlairTagComponent } from './flair/flair-tag/flair-tag.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { KarmaComponent } from './karma/karma.component';
     CommentListComponent,
     CommentCardComponent,
     ProfileComponent,
-    KarmaComponent
+    KarmaComponent,
+    FlairListComponent,
+    FlairTagComponent
   ],
   imports: [
     BrowserModule,

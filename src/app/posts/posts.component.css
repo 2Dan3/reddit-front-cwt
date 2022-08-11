@@ -11,6 +11,7 @@ h2 {
     background-image: linear-gradient(to bottom right, #1A258D, #9599b6);
     /* background: #1A258D; */
     border-radius: 3px;
-    width: inherit;
+    width: 100%;
     height: auto;
+    /* display: inline-block; */
 }
