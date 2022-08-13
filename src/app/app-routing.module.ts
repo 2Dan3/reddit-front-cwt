@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { PostViewComponent } from './post/post-view/post-view.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { ReplyListComponent } from './reply-list/reply-list.component';
 
 const routes: Routes = [
   {path: "",  component: CommunitiesComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: "post/:id", component: PostViewComponent},
   {path: "profile/:id", component: ProfileComponent},
   {path: "register", component: RegisterComponent},
-  {path: "login", component: LoginComponent}
+  {path: "login", component: LoginComponent},
+  {path: "replies/:parent_id", component: ReplyListComponent}
 ];
 
 @NgModule({

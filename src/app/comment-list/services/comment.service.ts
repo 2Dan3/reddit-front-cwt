@@ -24,4 +24,13 @@ export class CommentService {
    getAll() :Comment[] {
     return this.commentList;
    }
+
+   findById(comment_id: string|number) :Comment {
+    for(let comment of this.commentList){
+      if (comment._id == comment_id) {
+        return comment;
+      }
+    }
+    return new Comment();
+   }
 }
