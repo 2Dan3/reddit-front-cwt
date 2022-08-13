@@ -1,4 +1,4 @@
-#register-content-wrapper{
+#login-content-wrapper{
     /* background-image: linear-gradient(to bottom right, #1A258D, #4b5ae0); */
     background-color: #1A258D;
     height: fit-content;
@@ -11,11 +11,12 @@
 
 img{
     width: 20%;
-    margin: 3% 40%;
+    margin: 1% 40%;
 }
 
 #aligner-div{
-    height: 52vh;
+    width: 40%;
+    height: 59vh;
     margin: auto;
     vertical-align: middle;
 }
@@ -32,16 +33,23 @@ img{
     /* transform: translate(-50%, -50%); */
 }
 
-h1 {
+h3{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    text-decoration: underline;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+h1{
     text-align: center;
     font-style: italic;
     font-weight: bold;
     color: #FFFFFF;
-    margin-top: 0;
-    margin-bottom: 5%;
 }
 
 .field{
+    text-align: center;
     background-image: linear-gradient(to bottom right, #ffffff, #7180f0);
     border-radius: 10px;
     border: 1px solid #FFFFFF;
@@ -51,18 +59,20 @@ h1 {
     font-style: italic;
     margin-top: 2%;
     margin-bottom: 2%;
-    text-align: center;    
+    
 }
 
 .field:focus{
     /* border: 1px solid orangered; */
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
     border-radius: 3px;
     color: #FFFFFF;
     box-shadow: 1;
 }
 
-#btn-sign-up{
+#btn-log-in{
+    margin-left: auto;
+    margin-right: auto;
     cursor: pointer;
     background-color: orangered;
     border: 1px solid orangered;
@@ -70,10 +80,10 @@ h1 {
     color: #FFFFFF;
     font-size: 22px;
     font-weight: bold;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
-#btn-sign-up:hover, #btn-sign-up:focus{
+#btn-log-in:hover, #btn-log-in:focus{
     background-image: radial-gradient(orangered, #ff6600);
     border-radius: 24px;
     border: 1px solid #fd9d5d;

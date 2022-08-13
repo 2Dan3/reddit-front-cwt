@@ -16,6 +16,7 @@ import { KarmaComponent } from './karma/karma.component';
 import { FlairListComponent } from './flair/flair-list/flair-list.component';
 import { FlairTagComponent } from './flair/flair-tag/flair-tag.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RegisterComponent } from './register/register.component';
     KarmaComponent,
     FlairListComponent,
     FlairTagComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
