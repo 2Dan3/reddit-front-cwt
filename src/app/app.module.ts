@@ -18,6 +18,7 @@ import { FlairTagComponent } from './flair/flair-tag/flair-tag.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ReplyListComponent } from './reply-list/reply-list.component';
+import { UsersTableComponent } from './users-table/users-table.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ReplyListComponent } from './reply-list/reply-list.component';
     FlairTagComponent,
     RegisterComponent,
     LoginComponent,
-    ReplyListComponent
+    ReplyListComponent,
+    UsersTableComponent
   ],
   imports: [
     BrowserModule,

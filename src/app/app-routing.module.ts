@@ -7,6 +7,7 @@ import { PostViewComponent } from './post/post-view/post-view.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { ReplyListComponent } from './reply-list/reply-list.component';
+import { UsersTableComponent } from './users-table/users-table.component';
 
 const routes: Routes = [
   {path: "",  component: CommunitiesComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: "profile/:id", component: ProfileComponent},
   {path: "register", component: RegisterComponent},
   {path: "login", component: LoginComponent},
-  {path: "replies/:parent_id", component: ReplyListComponent}
+  {path: "replies/:parent_id", component: ReplyListComponent},
+  {path: "users", component: UsersTableComponent}
 ];
 
 @NgModule({

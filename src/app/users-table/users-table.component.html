@@ -1,0 +1,28 @@
+<!-- <p>users-table works!</p> -->
+
+<table class="table zebra-table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Registered</th>
+            <th>Display Name</th>
+            <th>Role</th>
+            <!-- <th></th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="row" *ngFor="let user of users">
+            <td class="name">
+                {{user.username}}
+            </td>
+            <td>{{user.email}}</td>
+            <td>{{user.registration_date}}</td>
+            <td class="name">
+                {{user.display_name}}
+            </td>
+            <td>{{user.role}}</td>
+            <!-- <td></td> -->
+        </tr>
+    </tbody>
+</table>
