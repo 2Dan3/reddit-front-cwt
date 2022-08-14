@@ -3,6 +3,8 @@
 <div id="community-overview-wrapper">
     <div class="flair-list-wrapper">
         <app-flair-list> </app-flair-list>
+
+        <app-rules [rules]="rules"></app-rules>
     </div>
     <div class="posts-list-wrapper">
         <app-posts [community_id]="community._id"></app-posts>

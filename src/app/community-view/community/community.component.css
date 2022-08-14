@@ -25,3 +25,7 @@
     /* display: inline-block; */
     width: 100%;
 }
+
+.flair-list-wrapper{
+    display: flex;
+}

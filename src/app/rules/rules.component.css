@@ -1,0 +1,15 @@
+#rules-wrapper{
+    margin-left: 1%;
+    background-image: linear-gradient(to bottom right, #8490ec, #1A258D);    border: 1px solid #1A258D;
+    border-radius: 3px;
+}
+
+p{
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    width: fit-content;
+    margin-left: 2%;
+    
+}

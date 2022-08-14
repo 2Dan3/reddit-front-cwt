@@ -19,6 +19,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ReplyListComponent } from './reply-list/reply-list.component';
 import { UsersTableComponent } from './users-table/users-table.component';
+import { RulesComponent } from './rules/rules.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { UsersTableComponent } from './users-table/users-table.component';
     RegisterComponent,
     LoginComponent,
     ReplyListComponent,
-    UsersTableComponent
+    UsersTableComponent,
+    RulesComponent
   ],
   imports: [
     BrowserModule,
