@@ -7,7 +7,7 @@
     <div id="aligner-div">
         <h1>Welcome redditor!</h1>
         <h3>Please Log In to proceed:</h3>
-        <form class="form-area">
+        <form [formGroup]="loginForm" class="form-area">
             
             <br>
             <input class="field" type="text" placeholder="Username">
@@ -15,7 +15,9 @@
             <input class="field" type="password" placeholder="Password">
             <br>
         
-            <button id="btn-log-in" (submit)="login()">Log me in</button>
+            <button id="btn-log-in" *ngIf="loginForm.valid" (submit)="login()">Log me in</button>
+            <p id="error" *ngIf="loginForm.invalid">Insufficient data</p>
+
             <p> <a href="/register">Not a redditor yet?</a> </p>
         </form>
     </div>

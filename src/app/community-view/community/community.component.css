@@ -28,4 +28,5 @@
 
 .flair-list-wrapper{
     display: flex;
+    /* flex-wrap: wrap-reverse; */
 }
