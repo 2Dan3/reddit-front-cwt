@@ -16,7 +16,10 @@ const FLAIRS = [
   {"_id":12, "name":"Cardio"},
   {"_id":13, "name":"Physics"},
   {"_id":14, "name":"Nautica"},
-  {"_id":15, "name":"Space & Astronomy"}
+  {"_id":15, "name":"Space & Astronomy"},
+  {"_id":16, "name":"Gardening"},
+  {"_id":17, "name":"Horror Stories"},
+  {"_id":18, "name":"Nomad Lifestyle"}
 ];
 
 @Injectable({

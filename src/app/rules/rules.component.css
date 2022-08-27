@@ -1,11 +1,14 @@
 #rules-wrapper{
+    color: white;
+    font-style: italic;
+    font-size: x-large;
     margin-left: 1%;
     background-image: linear-gradient(to bottom right, #8490ec, #1A258D);    border: 1px solid #1A258D;
     border-radius: 3px;
 }
 
 p{
-    color: #FFFFFF;
+    font-size: medium;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: underline;

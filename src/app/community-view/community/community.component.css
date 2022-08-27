@@ -28,5 +28,13 @@
 
 .flair-list-wrapper{
     display: flex;
-    /* flex-wrap: wrap-reverse; */
+    flex-wrap: nowrap;
+}
+
+/* #rules-component{
+    float: right;
+} */
+
+#flairs-component{
+    width: 100%;
 }
