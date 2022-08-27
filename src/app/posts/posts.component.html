@@ -3,5 +3,19 @@
 <h2>Posts:</h2>
 
 <div id="list-container">
+
+    <div id="header-sorting">
+        <h3>&nbsp;Sorted By</h3>
+        
+        <select id="dropdown-sorting">
+            <option onclick="sortByDateDesc()">Newest First</option>
+            <option (click)="sortByDateAsc()">Oldest First</option>
+            <option (click)="sortByKarmaDesc()">Most Popular</option>
+            <option (click)="sortByKarmaAsc()">Least Popular</option>
+            <option (click)="sortByTrendingDesc()">Hottest</option>
+            <option (click)="sortByTrendingAsc()">Coldest</option>
+
+        </select>
+    </div>
     <app-post-card [post]="p" *ngFor="let p of posts" routerLink="/post/{{p._id}}"></app-post-card>
 </div>

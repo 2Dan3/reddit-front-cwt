@@ -1,9 +1,18 @@
-#flair-list{
+#content{
     width: 100%;
     background-image: linear-gradient(to bottom right, #ffffff, #8490ec);
     border-radius: 3px;
-    /* border: 2px groove #1A258D; */
+    
+}
+
+#flair-list{
     display: flex;
     flex-wrap: wrap;
-    /* margin-left: 1%; */
+}
+
+h2{
+    font-weight: bold;
+    font-style: italic;
+    /* text-decoration: overline; */
+    margin: 0 0 14px 1px;
 }

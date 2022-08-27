@@ -23,4 +23,31 @@ export class PostsComponent implements OnInit {
     this.posts = this.postService.getAll(this.community_id);
   }
 
+  sortByDateDesc(){
+    console.log("Sort By Date: Newest")
+    // *TODO: Implement this.postService API call
+  }
+  sortByDateAsc(){
+    console.log("Sort By Date: Oldest")
+    // *TODO: Implement this.postService API call
+  }  
+
+  sortByKarmaDesc(){
+    console.log("Sort By Karma: Most popular")
+    // *TODO: Implement this.postService API call
+  }
+  sortByKarmaAsc(){
+    console.log("Sort By Karma: Least popular")
+    // *TODO: Implement this.postService API call
+  }
+
+  sortByTrendingDesc(){
+    console.log("Sort By Trending: Hottest")
+    // *TODO: Implement this.postService API call
+  }
+  sortByTrendingAsc(){
+    console.log("Sort By Trending: Coldest")
+    // *TODO: Implement this.postService API call
+  }
+  
 }

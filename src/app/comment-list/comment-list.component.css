@@ -1,7 +1,7 @@
 #list-container{
     /* background-image: linear-gradient(to bottom right, #fc581c, #ffc59e); */
     /* background-image: linear-gradient(to bottom right, #1A258D, #000000); */
-    background-image: radial-gradient(#1A258D, #0a00306b);
+    background-image: linear-gradient(to top, #3340b6, #0064fa6b);
     border: 2px #ffffff solid;
     border-radius: 8px;
     width: 97%;
