@@ -1,19 +1,20 @@
 <p>profile works!</p>
 
 <div id="container">
-    <p>karma</p>
+    <p id="karma-paragraph">Total karma: {{this.total_karma_points}}</p>
     <div id="img-container">
-        <img (click)="choosePic()" id="profile-img" src="" alt="Profile Pic"/>
+        <img (click)="choosePic()" id="profile-img" src="../../assets/reddit-logo-icon.png" alt="Profile Pic"/>
+        <label for="description">Description:</label>
+        <textarea id="description" class="editable" maxlength="110"></textarea>
+
+        <label for="display-name">Alias:</label>
+        <input id="display-name" class="editable" minlength="3" maxlength="20"/>
+
+        <button id="save-changes">Save changes</button>
+
+        <!-- <button (click)="unhideForm()" id="change-password-btn"></button> -->
+        <button id="change-password-btn">Change password</button>
     </div>
+    <br><br>
     
-    <label for="description">Description:</label>
-    <input id="description" class="editable"/>
-
-    <label for="display-name">Alias:</label>
-    <input id="display-name" class="editable"/>
-
-    <!-- <button (click)="unhideForm()" id="change-password-btn"></button> -->
-    <button id="change-password-btn">Change password</button>
-
-    <button id="save-changes">Save changes</button>
 </div>

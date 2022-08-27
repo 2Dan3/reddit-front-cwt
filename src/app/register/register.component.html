@@ -12,7 +12,9 @@
             <input class="field" type="text" placeholder="Username" formControlName="username" required>
             <br>
             <input id="pw" class="field" type="password" placeholder="Password" formControlName="password" required>
-            <input id="repeated-pw" class="field" type="password" placeholder="Confirm password">
+            <!-- <input id="repeated-pw" class="field" type="password" placeholder="Confirm password"> -->
+            <input id="email" class="field" type="email" placeholder="Email" formControlName="email" required>
+
             <br>
             <button id="btn-sign-up" type="submit" *ngIf="registerForm.valid">Sign me up!</button>
             <p> <a href="/login">Already a redditor?</a> </p>

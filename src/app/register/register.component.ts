@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    // private authService: AuthService,
+    private authService: AuthService,
     private router: Router,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder
@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       "username": ['', Validators.compose([Validators.required])],
       "password": ['', Validators.compose([Validators.required, Validators.minLength(8)])],
-      // "email": ['', Validators.compose([Validators.required, Validators.email])]
+      "email": ['', Validators.compose([Validators.required, Validators.email])]
     });
   }
 
@@ -51,17 +51,18 @@ export class RegisterComponent implements OnInit {
     // }
     this.submitted = true;
 
-    // this.authService.register(this.registerForm.value)
-    //   .subscribe( 
-    //     () => {
-    //       // this.userService.getMyInfo().subscribe();
-    //       this.router.navigate(['/login']);
-    //     },
-    //     (_error: any) => {
-    //       this.submitted = false;
-    //       console.log(_error);
-    //       // this.notification = {msgType: 'error', msgBody: 'Incorrect username or password.'};
-    //     });
+    this.authService.register(this.registerForm.value)
+      .subscribe( 
+        (res) => {
+          // console.log("response status;" + res['status']);
+          // this.userService.getMyInfo().subscribe();
+          this.router.navigate(['/login']);
+        },
+        (_error: any) => {
+          this.submitted = false;
+          console.log("Error caught;" + _error);
+          // this.notification = {msgType: 'error', msgBody: 'Incorrect username or password.'};
+        });
   }
 
 

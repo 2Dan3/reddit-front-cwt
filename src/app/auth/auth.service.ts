@@ -29,7 +29,7 @@ export class AuthService {
       'password': user.password
     };
 
-    return this.apiService.post('http://localhost:8080/reddit/users/login', JSON.stringify(body), loginHeaders)
+    return this.apiService.post('/login', JSON.stringify(body), loginHeaders)
       .pipe(
         map( (res) => {
           console.log(res);
@@ -40,11 +40,12 @@ export class AuthService {
   }
 
   register(user: any) {
+    console.log(user);
     const registerHeaders = new HttpHeaders({
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     });
-    return this.apiService.post('http://localhost:8080/reddit/users/', JSON.stringify(user), registerHeaders)
+    return this.apiService.post('/users/', JSON.stringify(user), registerHeaders)
       .pipe(
         map( 
           (res) => {

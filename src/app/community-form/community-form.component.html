@@ -1,0 +1,25 @@
+<!-- <p>community-form works!</p> -->
+
+<div id="form-content-wrapper">
+
+    <img src="../../assets/reddit-logo-icon.png"/>
+
+    <div id="aligner-div">
+        <h1>Community creation:</h1>
+        <h3>Describe your community!</h3>
+        <form [formGroup]="communityForm" (submit)="saveCommunity()" class="form-area">
+            
+            <br>
+            <label for="name">Name:</label>
+            <input formControlName="name" id="name-input" class="field" type="text" placeholder="e.g. (r/) Dogs">
+            <label for="description">Description:</label>
+            <input formControlName="description" id="description-input" class="field" type="text" placeholder="Description ...">
+            <br>
+        
+            <button id="btn-save" type="submit" *ngIf="communityForm.valid">Create community</button>
+            <p id="error" *ngIf="communityForm.invalid">Not all required data was entered</p>
+
+        </form>
+    </div>
+
+</div>

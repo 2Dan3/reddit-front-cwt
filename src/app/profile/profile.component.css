@@ -1,15 +1,63 @@
+*{
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#karma-paragraph{
+    margin: 20px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
 #container{
     background-image: radial-gradient(#17258d, #1A258D);
     border-radius: 3px;
 }
 
 #img-container{
+    width: 94%;
+    height: 50vh;
     border: 2px #FFFFFF solid;
     border-radius: 30px;
-    /* padding: ; */
+    margin: auto;
 }
 
 #img-container:hover{
     border-color: #fc581c;
     cursor: pointer;
+}
+
+img{
+    min-width: 80px;
+    max-width: 100px;
+    min-height: 80px;
+    max-height: 100px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+#description{
+    height: 15vh;
+    resize: none;
+}
+
+label{
+    margin-right: 1%;
+}
+#description, #display-name{
+    background-image: linear-gradient(to bottom right, #a7b1fc, #ffffff);
+    margin-right: 3%;
+}
+
+#save-changes, #change-password-btn{
+    margin-right: 1%;
+    background-image: linear-gradient(to bottom right, #fc581c, rgb(255, 196, 0));
+    border: 1px solid black;
+}
+
+#save-changes:hover, #change-password-btn:hover{
+    border-radius: 7px;
+    color: rgb(218, 243, 252);
+    transition: all .3s ease-in-out;
 }

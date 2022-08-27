@@ -1,6 +1,6 @@
-#register-content-wrapper{
+#form-content-wrapper{
     /* background-image: linear-gradient(to bottom right, #1A258D, #4b5ae0); */
-    background-color: #1A258D;
+    background-image: linear-gradient(to bottom right, #1A258D, #5e6072);
     height: fit-content;
     width: 100%;
     display: flex;
@@ -10,12 +10,13 @@
 }
 
 img{
-    width: 20%;
-    margin: 2% 40%;
+    width: 18%;
+    margin: auto 41%;
 }
 
 #aligner-div{
-    /* height: 52vh; */
+    width: 40%;
+    /* height: 49vh; */
     margin: auto;
     vertical-align: middle;
 }
@@ -32,47 +33,60 @@ img{
     /* transform: translate(-50%, -50%); */
 }
 
-h1 {
+h3{
+    margin-top: 2%;
+    margin-bottom: 4%;
+    text-decoration: underline;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+h1{
     text-align: center;
     font-style: italic;
     font-weight: bold;
     color: #FFFFFF;
     margin-top: 0;
-    margin-bottom: 4%;
+    
 }
 
 .field{
-    background-image: linear-gradient(to bottom right, #ffffff, #7180f0);
+    text-align: left;
+    background-image: linear-gradient(to bottom right, #a7b1fc, #ffffff);
     border-radius: 10px;
     border: 1px solid #FFFFFF;
-    color: gray;
+    color: rgb(75, 75, 75);
     font-size: 28px;
     font-weight: bold;
     font-style: italic;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    text-align: center;    
+    margin-top: 1%;
+    margin-bottom: 1%;
+    
 }
 
 .field:focus{
     /* border: 1px solid orangered; */
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
     border-radius: 3px;
     color: #FFFFFF;
     box-shadow: 1;
 }
 
-#btn-sign-up{
+#btn-save{
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
     background-color: orangered;
     border: 1px solid orangered;
     border-radius: 3px;
     color: #FFFFFF;
     font-size: 22px;
     font-weight: bold;
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-#btn-sign-up:hover, #btn-sign-up:focus{
+#btn-save:hover, #btn-save:focus{
     background-image: radial-gradient(orangered, #ff6600);
     border-radius: 24px;
     border: 1px solid #fd9d5d;
@@ -97,4 +111,22 @@ p *{
     text-decoration: none;
     color: #FFFFFF;
     border-bottom: 1px solid #FFFFFF;
+}
+
+label{
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 10%;
+}
+
+#description-input{
+    height: 150px;
+}
+
+#error{
+    font-weight: bold;
+    color: red;
+    font-size: x-large;
+    border: 1px solid red;
 }

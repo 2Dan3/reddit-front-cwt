@@ -28,7 +28,12 @@ export class ApiService {
     'Content-Type': 'application/json'
   });
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+    ) 
+    {
+
+    }
 
   get(path: string, args?: any): Observable<any> {
     const options = {
@@ -36,12 +41,12 @@ export class ApiService {
     };
 
     if (args) {
-      
+      console.log("args;"+ args)
       // options['params'] = this.serialize(args);
     }
 
     return this.http.get(path, options)
-      .pipe(catchError(this.checkError.bind(this)));
+      // .pipe(catchError(this.checkError.bind(this)));
   }
 
   post(path: string, body: any, customHeaders?: HttpHeaders): Observable<any> {
@@ -56,8 +61,8 @@ export class ApiService {
     return this.request(path, body, RequestMethod.Delete);
   }
 
-  private request(path: string, body: any, method = RequestMethod.Post, customHeaders?: HttpHeaders): Observable<any> {
-    const req = new HttpRequest(method, path, body, {
+  private request(path: string, body: any, method: RequestMethod, customHeaders?: HttpHeaders): Observable<any> {
+    const req = new HttpRequest(method, this._api_url + path, body, {
       headers: customHeaders || this.headers,
     });
 

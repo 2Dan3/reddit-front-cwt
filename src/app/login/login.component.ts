@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private router: Router,
-    // private authService: AuthService,
+    private authService: AuthService,
     private formBuilder: FormBuilder 
   )
   {this.loginForm = this.formBuilder.group({
@@ -35,17 +35,17 @@ export class LoginComponent implements OnInit {
       // }
       // this.submitted = true;
       console.log(this.loginForm.value);
-      // this.authService.login(this.loginForm.value)
-      //   .subscribe( 
-      //     (res: any) => {
-
-      //       this.router.navigate(['']);
-      //     },
-      //     (_error: any) => {
-      //       // this.submitted = false;
-      //       console.log(_error);
-      //       // this.notification = {msgType: 'error', msgBody: 'Incorrect username or password.'};
-      //     });
+      this.authService.login(this.loginForm.value)
+        .subscribe( 
+          (res: any) => {
+            console.log("successful Login!");
+            this.router.navigate(['/']);
+          },
+          (_error: any) => {
+            // this.submitted = false;
+            console.log(_error);
+            // this.notification = {msgType: 'error', msgBody: 'Incorrect username or password.'};
+          });
   }
 
 }

@@ -1,6 +1,6 @@
 .table{
     margin: auto;
-    width: 60%;
+    width: 98%;
     border: 3px solid #1A258D;
     border-radius: 3px;
     background-image: linear-gradient(to bottom right, #414141, #6070fa);
@@ -10,7 +10,7 @@
     text-align: center;
     border: 1px solid #1A258D;
     color: #FFFFFF;
-    font-size: large;
+    font-size: x-large;
 }
 
 .table tr *:hover{
@@ -25,7 +25,8 @@ thead tr th{
 
 .row{
     margin-top: 10px;
-    /* TODO*: test */
+    height: 7rem;
+
 }
 
 .name{

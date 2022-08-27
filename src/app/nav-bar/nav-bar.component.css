@@ -10,12 +10,10 @@
 .nav-item{
     background-image: linear-gradient(to bottom right, azure, white);
     border: 1px solid #fc581c;
-    /* border-radius: 3px; */
     width: fit-content;
-    /* margin: auto; */
+    margin: auto 10px;
     display: inline-block;
-    margin-right: 10px;
-    margin-left: 10px;
+    vertical-align: middle;
 }
 
 .nav-item:hover{
@@ -31,6 +29,28 @@
     font-size: x-large;
     font-weight: bold;
     text-transform: uppercase;
-    /* padding: 30px; */
     margin: 15px;
+}
+
+#img-div{
+    
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    margin: auto 10px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+#img-div img{
+    min-width: 51px;
+    max-width: 61px;
+    min-height: 51px;
+    max-height: 61px;
+    cursor: pointer;
+    color: #fc581c;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 50%;
 }

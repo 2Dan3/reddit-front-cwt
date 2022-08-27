@@ -22,6 +22,8 @@ import { ReplyListComponent } from './reply-list/reply-list.component';
 import { UsersTableComponent } from './users-table/users-table.component';
 import { RulesComponent } from './rules/rules.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommunityFormComponent } from './community-form/community-form.component';
 
 @NgModule({
   declarations: [
@@ -43,11 +45,13 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     ReplyListComponent,
     UsersTableComponent,
     RulesComponent,
-    NavBarComponent
+    NavBarComponent,
+    CommunityFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule
   ],

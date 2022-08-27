@@ -1,16 +1,22 @@
 <div id="nav-items-container">
+    
+    <div id="img-div">
+        <img src="../../assets/profile_icon_round.png" alt="My Profile" (click)="toMyProfilePage()"/>
+    </div>
+    
     <!-- *ngIf='!isUserLogged() for /login' -->
-    <p class="nav-item">
+    <div class="nav-item">
         <a href="/login">Sign In</a>
-    </p>    
+    </div>    
     
     <!-- *ngIf='isUserLogged() for /logout' -->
-    <button class="nav-item">Sign Out</button>
+    <button class="nav-item" (click)="logout()">Sign Out</button>
 
-    <p class="nav-item">
+    <div class="nav-item">
         <a href="/">Communities</a>
-    </p>
-    <p class="nav-item">
-        <a href=""></a>
-    </p>
+    </div>
+    <div class="nav-item">
+        <a href="/users">Redittors</a>
+    </div>
+        
 </div>

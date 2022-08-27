@@ -7,13 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  total_karma_points: string|number;
+
+  constructor() {
+    this.total_karma_points = this.getKarmaForUser();
+  }
 
   ngOnInit(): void {
   }
 
   choosePic() {
     // TODO*: Implement
+  }
+
+  private getKarmaForUser() :string|number {
+    // TODO*: Implement
+    return 285;
   }
 
 }
