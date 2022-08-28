@@ -1,18 +1,17 @@
-#flair-card{
+#flair-chip{
     background-image: radial-gradient(#1A258D, #9599b6);
     color: #FFFFFF;
 
     border: 2px solid #1A258D;
-    border-radius: 12px;
+    border-radius: 16px;
     
     width: fit-content;
     margin: 8px;
 }
 
-#flair-card p{
+#flair-chip p{
     font-style: italic;
     font-weight: bold;
     font-size: large;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 5px 10px;
 }

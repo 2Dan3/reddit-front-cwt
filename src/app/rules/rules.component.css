@@ -7,6 +7,12 @@
     border-radius: 3px;
 }
 
+h5{
+    margin-top: 5%;
+    height: fit-content;
+    border-bottom: 1px solid lightblue;
+}
+
 p{
     font-size: medium;
     font-weight: bold;
