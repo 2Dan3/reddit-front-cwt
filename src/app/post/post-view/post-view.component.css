@@ -1,6 +1,5 @@
 #container{
-    /* background-image: linear-gradient(to bottom right, #1A258D, #000000); */
-    background-image: linear-gradient(#3340b6, #0064fa6b);
+    background-image: url(../../../assets/bg_nebula_2.png);
 
     width: 100%;
     height: auto;

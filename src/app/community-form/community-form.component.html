@@ -11,9 +11,9 @@
             
             <br>
             <label for="name">Name:</label>
-            <input formControlName="name" id="name-input" class="field" type="text" placeholder="e.g. (r/) Dogs">
+            <input name="name" formControlName="name" id="name-input" class="field" type="text" placeholder="e.g. (r/) Dogs"/>
             <label for="description">Description:</label>
-            <input formControlName="description" id="description-input" class="field" type="text" placeholder="Description ...">
+            <textarea name="description" formControlName="description" id="description-input" class="field" type="text" placeholder="Description ..." maxlength="120"></textarea>
             <br>
         
             <button id="btn-save" type="submit" *ngIf="communityForm.valid">Create community</button>

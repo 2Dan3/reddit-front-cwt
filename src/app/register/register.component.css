@@ -1,6 +1,6 @@
 #register-content-wrapper{
-    /* background-image: linear-gradient(to bottom right, #1A258D, #4b5ae0); */
-    background-color: #1A258D;
+    background-image: url(../../assets/bg_nebula_2.png);
+    background-size: cover;
     height: fit-content;
     width: 100%;
     display: flex;

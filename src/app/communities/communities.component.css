@@ -1,15 +1,10 @@
-/* body {
-    background-color: #1A258D;
-    align-items: center;
-} */
-
 h2 {
     font-style: italic;
 }
 
 #list-container {
-    background-image: linear-gradient(to bottom right, #1A258D, #9599b6);
-    /* background: #1A258D; */
+    background-image: url(../../assets/bg_nebula_2.png);
+    /* background-size: cover; */
     border-radius: 3px;
     width: inherit;
     height: auto;

@@ -11,7 +11,8 @@
 }
 
 #container{
-    background-image: radial-gradient(#17258d, #1A258D);
+    background-image: url(../../assets/bg_nebula_2.png);
+    /* background-size: cover; */
     border-radius: 3px;
 }
 

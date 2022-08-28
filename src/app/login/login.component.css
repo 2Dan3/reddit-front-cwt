@@ -1,6 +1,6 @@
 #login-content-wrapper{
-    /* background-image: linear-gradient(to bottom right, #1A258D, #4b5ae0); */
-    background-color: #1A258D;
+    background-image: url(../../assets/bg_nebula_2.png);
+    background-size: cover;
     height: fit-content;
     width: 100%;
     display: flex;
@@ -50,7 +50,7 @@ h1{
 
 .field{
     text-align: center;
-    background-image: linear-gradient(to bottom right, #ffffff, #7180f0);
+    background-image: linear-gradient(to bottom left, #ffffff, #7180f0);
     border-radius: 10px;
     border: 1px solid #FFFFFF;
     color: gray;
@@ -113,6 +113,7 @@ p *{
 #error{
     font-weight: bold;
     color: red;
-    font-size: large;
+    font-size: xx-large;
     border: 1px solid red;
+    background-color: rgba(245, 245, 245, 0.603);
 }

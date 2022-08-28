@@ -1,22 +1,26 @@
 <div id="nav-items-container">
     
-    <div id="img-div">
-        <img src="../../assets/profile_icon_round.png" alt="My Profile" (click)="toMyProfilePage()"/>
+    <div class="img-div">
+        <img src="../../assets/reddit-logo-icon.png" alt="Home" (click)="toHome()"/>
     </div>
     
-    <!-- *ngIf='!isUserLogged() for /login' -->
-    <div class="nav-item">
-        <a href="/login">Sign In</a>
-    </div>    
-    
-    <!-- *ngIf='isUserLogged() for /logout' -->
-    <button class="nav-item" (click)="logout()">Sign Out</button>
-
     <div class="nav-item">
         <a href="/">Communities</a>
     </div>
     <div class="nav-item">
         <a href="/users">Redittors</a>
     </div>
+    
+    <div class="img-div right-float">
+        <img src="../../assets/real_profile_icon_demo.png" alt="My profile" (click)="toMyProfilePage()"/>
+    </div>
+
+    <!-- *ngIf='!isUserLogged() for /login' -->
+    <div class="nav-item right-float">
+        <a href="/login">Sign In</a>
+    </div>    
+    
+    <!-- *ngIf='isUserLogged() for /logout' -->
+    <button class="nav-item right-float" (click)="logout()">Sign Out</button>
         
 </div>

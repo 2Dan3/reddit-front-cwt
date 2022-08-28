@@ -33,7 +33,7 @@
     margin: 15px;
 }
 
-#img-div{
+.img-div{
     
     display: inline-block;
     width: fit-content;
@@ -43,15 +43,25 @@
     border-radius: 50%;
 }
 
-#img-div img{
-    min-width: 51px;
-    max-width: 61px;
-    min-height: 51px;
-    max-height: 61px;
+.img-div img{
+    min-width: 50px;
+    max-width: 57px;
+    min-height: 50px;
+    max-height: 57px;
     cursor: pointer;
     color: #fc581c;
     font-size: x-large;
     font-weight: bold;
     font-style: italic;
     border-radius: 50%;
+}
+
+.right-float{
+    float: right;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+img{
+    border: 1px solid lightblue;
 }

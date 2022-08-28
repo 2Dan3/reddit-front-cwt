@@ -17,14 +17,16 @@ body {
     border: 1px solid lightblue;
     border-radius: 3px;
     width: 100%;
-    height: 50px;
+    height: 35px;
     margin-top: 8px;
     text-align: center;
     color: orangered;
     font-weight: bold;
     font-size: xx-large;
     font-style: italic;
-    
+    position: sticky;
+    bottom: 0;
+    top: 60vh;
 }
 
 #footer:hover{
@@ -32,4 +34,16 @@ body {
     color: #fc581cef;
     text-decoration: underline;
     transition: all .3s ease-in-out;
+}
+
+#footer img{
+    margin: auto;
+    margin-top: 3px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+#footer img:hover{
+    /* transform: scale(1.1); */
+    border: 1px dotted orangered;
 }

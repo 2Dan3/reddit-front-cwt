@@ -1,19 +1,37 @@
 /* #wrapper{
     display: inline;
 } */
-/* body{
-    display: grid;
-    grid-template-columns: max-content 1fr;
-} */
 
 #comment{
     background-image: linear-gradient(to bottom right, #ffffff, #e6e6e6);
     display: inline-block;
     /* grid-column: 1; */
+    border: 2px solid lightblue;
     border-radius: 3px;
     width: 85%;
     height: fit-content;
     margin-left: auto;
     margin-right: 1%;
     margin-bottom: 2%;
+}
+
+#comment *{
+    margin-left: 5px;
+}
+
+#replies-btn{
+    margin-right: 6px;
+    border-radius: 3px;
+    border: 2px solid #1A258D;
+    text-decoration: none;
+    color: #1A258D;
+    background-color: white;
+    font-size: x-large;
+    font-weight: bold;
+    float: right;
+}
+
+#replies-btn:hover{
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
 }

@@ -3,7 +3,8 @@
     width: 98%;
     border: 3px solid #1A258D;
     border-radius: 3px;
-    background-image: linear-gradient(to bottom right, #414141, #6070fa);
+    background-image: url(../../assets/bg_nebula_2.png);
+    background-size: cover;
 }
 
 .table *{
@@ -15,7 +16,6 @@
 
 .table tr *:hover{
     font-weight: bold;
-    color: rgb(223, 223, 223);
     border: 1px solid #fc581c;
 }
 
