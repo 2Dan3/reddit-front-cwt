@@ -8,6 +8,7 @@ h2 {
     border-radius: 3px;
     width: inherit;
     height: auto;
+    min-height: 81vh;
 }
 
 #header-create-community-btn{

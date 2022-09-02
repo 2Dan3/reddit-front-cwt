@@ -25,7 +25,10 @@ export class ApiService {
 
   headers = new HttpHeaders({
     'Accept': 'application/json',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+    'Access-Control-Allow-Origin': '*'
+    
   });
 
   constructor(
@@ -45,7 +48,7 @@ export class ApiService {
       // options['params'] = this.serialize(args);
     }
 
-    return this.http.get(path, options)
+    return this.http.get(this._api_url + path, options);
       // .pipe(catchError(this.checkError.bind(this)));
   }
 

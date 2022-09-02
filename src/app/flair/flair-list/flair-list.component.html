@@ -3,7 +3,11 @@
     <h2>&nbsp;Flairs usable:</h2>
 
     <div id="flair-list">
-        <app-flair-tag *ngFor="let tag of flairs" [_flair]="tag"> </app-flair-tag>
+        <div id="img">
+            <img src="../../../assets/add.png" alt="Add New"/>
+        </div>
+        
+        <app-flair-tag *ngFor="let tag of flairs" [_flair]="tag"> </app-flair-tag>        
     </div>
 
 </div>
