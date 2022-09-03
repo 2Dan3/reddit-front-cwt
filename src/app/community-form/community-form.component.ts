@@ -40,6 +40,7 @@ export class CommunityFormComponent implements OnInit {
         .subscribe( 
           (res: any) => {
             console.log("Community created!");
+            window.alert("Your Community was created!");
             this.router.navigate(['/']);
           },
           (_error: any) => {

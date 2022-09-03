@@ -29,12 +29,14 @@ export class AuthService {
       'password': user.password
     };
 
-    return this.apiService.post('/login', JSON.stringify(body), loginHeaders)
+    return this.apiService.post('/users/login', JSON.stringify(body), loginHeaders)
       .pipe(
         map( (res) => {
-          console.log(res);
-          this.access_token = res.accessToken;
-          localStorage.setItem("jwt", res.accessToken);
+          // console.log("Login result: " + JSON.stringify(res));
+          this.access_token = res.body.accessToken;
+          // console.log("res.accessToken: " + res.body.accessToken);
+          localStorage.setItem("jwt", res.body.accessToken);
+          console.log("JWT from localStorage: " + localStorage.getItem("jwt"));
         }
         ));
   }
@@ -57,7 +59,8 @@ export class AuthService {
   logout() {
     // this.userService.currentUser = null;
     this.access_token = null;
-    this.router.navigate(['/login']);
+    window.alert("You have been signed out.");
+    this.router.navigate(['/']);
   }
 
   isTokenPresent() {

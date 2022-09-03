@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../api/api.service';
+import { AuthService } from '../auth/auth.service';
 import { Community } from './model/community.model';
 import { CommunityService } from './services/community.service';
 
@@ -17,6 +18,7 @@ export class CommunitiesComponent implements OnInit {
     private communityService: CommunityService,
     private router: Router,
     private apiService: ApiService,
+    protected authService: AuthService,
     ) 
     {
     // this.communities = this.communityService.getAll();

@@ -58,7 +58,7 @@
 
 .right-float{
     float: right;
-    margin-top: auto;
+    margin-top: 16px;
     margin-bottom: auto;
 }
 
@@ -67,4 +67,12 @@ img{
 }
 img:hover{
     border: 1px solid #fc581c;
+}
+
+#sign-out-btn{
+    cursor: pointer;
+}
+
+#profile-img{
+    margin-top: auto;
 }

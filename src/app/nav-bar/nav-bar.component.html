@@ -11,16 +11,16 @@
         <a href="/users">Redittors</a>
     </div>
     
-    <div class="img-div right-float">
+    <div id="profile-img" class="img-div right-float" *ngIf="this.authService.isTokenPresent()">
         <img src="../../assets/real_profile_icon_demo.png" alt="My profile" (click)="toMyProfilePage()"/>
     </div>
 
     <!-- *ngIf='!isUserLogged() for /login' -->
-    <div class="nav-item right-float">
+    <div class="nav-item right-float" *ngIf="!this.authService.isTokenPresent()">
         <a href="/login">Sign In</a>
     </div>    
     
     <!-- *ngIf='isUserLogged() for /logout' -->
-    <button class="nav-item right-float" (click)="logout()">Sign Out</button>
+    <button *ngIf="this.authService.isTokenPresent()" class="nav-item right-float" id="sign-out-btn" (click)="logout()">Sign Out</button>
         
 </div>

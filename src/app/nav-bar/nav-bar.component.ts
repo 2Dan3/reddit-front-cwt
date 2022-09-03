@@ -11,14 +11,15 @@ export class NavBarComponent implements OnInit {
 
   constructor(
     // private authService :AuthService,
-    private router: Router
+    private router: Router,
+    protected authService: AuthService,
   ) { }
 
   ngOnInit(): void {
   }
 
   logout() {
-    // this.authService.logout();
+    this.authService.logout();
   }
 
   protected toMyProfilePage() {

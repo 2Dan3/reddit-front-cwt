@@ -53,14 +53,20 @@ export class RegisterComponent implements OnInit {
 
     this.authService.register(this.registerForm.value)
       .subscribe( 
-        (res) => {
+        (res: any) => {
           // console.log("response status;" + res['status']);
           // this.userService.getMyInfo().subscribe();
-          this.router.navigate(['/login']);
+          // if (res['status'] == 201){
+            window.alert("You have successfully registered.");
+            this.router.navigate(['/login']);
+          // }
         },
         (_error: any) => {
           this.submitted = false;
           console.log("Error caught;" + _error);
+          if (_error['status'] == 406) {
+            window.alert("Username and/or email you've entered were already taken. Try another one!");
+          }
           // this.notification = {msgType: 'error', msgBody: 'Incorrect username or password.'};
         });
   }

@@ -72,7 +72,7 @@ textarea{
     /* border: 1px solid orangered; */
     transition: all .3s ease-in-out;
     border-radius: 3px;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
     box-shadow: 1;
 }
 
@@ -129,8 +129,31 @@ label{
 }
 
 #error{
+    height: fit-content;
     font-weight: bold;
     color: red;
-    font-size: x-large;
+    font-size: xx-large;
     border: 1px solid red;
+    background: #0000007e;
+}
+
+#community-name-div{
+    align-items: center;
+    
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#community-name-div *{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.prefix{
+    text-align: right;
+    max-width: 40px;
+    /* width: fit-content; */
+    font-size: 32px;
+    color: darkblue;
 }

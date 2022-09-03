@@ -43,7 +43,10 @@ export class LoginComponent implements OnInit {
           },
           (_error: any) => {
             // this.submitted = false;
-            console.log(_error);
+            console.log("Login error: " + JSON.stringify(_error));
+            window.alert("Invalid username and/or password.");
+            this.loginForm.reset;
+            
             // this.notification = {msgType: 'error', msgBody: 'Incorrect username or password.'};
           });
   }

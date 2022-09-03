@@ -3,7 +3,7 @@
 
 <div id="list-container">
     <div id="header-items-container">
-        <button id="header-create-community-btn" (click)="toAddCommunityForm()">Create your community!</button>
+        <button *ngIf="this.authService.isTokenPresent()" id="header-create-community-btn" (click)="toAddCommunityForm()">Create your community!</button>
     </div>
     <app-community-card [community]="comm" *ngFor="let comm of communities"></app-community-card>
 </div>
