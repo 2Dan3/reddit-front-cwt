@@ -15,9 +15,11 @@ export class PostsComponent implements OnInit {
   posts: Post[] = [];
 
   constructor(
-    private postService : PostService) {
-
-     }
+    private postService : PostService,
+    ) 
+    {
+        console.log("from posts component, community_id: " +this.community_id);
+    }
 
   ngOnInit(): void {
     this.posts = this.postService.getAll(this.community_id);

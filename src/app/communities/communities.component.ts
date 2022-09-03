@@ -24,7 +24,11 @@ export class CommunitiesComponent implements OnInit {
     this.apiService.get("/communities")
     .subscribe( 
       (res) => {
-        this.communities = res;
+        this.communities = [];
+
+        for(let res_obj of res) {
+          this.communities.push(new Community(res_obj));
+        }
         // console.log("response status;" + res['status']);
         console.log("Result:" +JSON.stringify(res));
         console.log("communities upon data arrival: ", this.communities);
@@ -36,7 +40,8 @@ export class CommunitiesComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    
+    // this.communities = this.communityService.communityList;
+    // console.log(this.communities);
   }
 
   toAddCommunityForm() {

@@ -7,13 +7,13 @@ export class Community {
     suspension_reason: string;
 
     constructor(obj?: any) {
-        this._id = obj && obj._id || null;
+        this._id = obj && obj.id || null;
         this.name = obj && obj.name || null;
         this.description = obj && obj.description || null;
-        this.creation_date = obj && obj.creation_date || null;
-        this.is_suspended = obj && obj.is_suspended || null;
-        this.suspension_reason = obj && obj.suspension_reason || null;
-        // this._id = obj && obj._id || null;
+        this.creation_date = obj && new Date(obj.creationDate).toLocaleDateString() || null;
+        this.is_suspended = obj && obj.isSuspended || null;
+        this.suspension_reason = obj && obj.suspensionReason || null;
+        // this.creation_date.toLocaleDateString();
     }
 
 }

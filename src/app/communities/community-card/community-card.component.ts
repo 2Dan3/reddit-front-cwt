@@ -11,7 +11,10 @@ export class CommunityCardComponent implements OnInit {
   @Input()
   community!: Community;
 
-  constructor() { }
+  constructor() 
+  {
+    // console.log("from community-card: community._id = ", this.community._id);
+  }
 
   ngOnInit(): void {
 
