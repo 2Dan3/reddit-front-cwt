@@ -1,7 +1,7 @@
 <!-- <p>posts works!</p> -->
 
 <!-- <h2>r/{{this.community_id}} Posts:</h2> -->
-<h2>Posts:</h2>
+<!-- <h2>Posts:</h2> -->
 
 <div id="list-container">
 
@@ -19,4 +19,9 @@
         </select>
     </div>
     <app-post-card [post]="p" *ngFor="let p of posts" routerLink="/post/{{p._id}}"></app-post-card>
+    
+    <div *ngIf="isPostListEmpty()" id="empty-list-filler">
+        <p>This redditVerse is empty.</p>
+        <p>Be the first to post something!</p>
+    </div>
 </div>

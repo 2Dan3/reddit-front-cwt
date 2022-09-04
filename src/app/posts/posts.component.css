@@ -36,6 +36,32 @@ h3{
     /* background: #1A258D; */
     border-radius: 3px;
     width: 100%;
+    min-height: 67vh;
     height: auto;
     /* display: inline-block; */
+}
+
+#empty-list-filler{
+    background-color: rgba(245, 245, 245, 0.39);
+    border-radius: 3px;
+    border: 1px solid #fc581c;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 2% auto;
+    text-align: center;
+    color: white;
+    width: fit-content;
+    /* text-decoration: underline; */
+}
+
+#empty-list-filler:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: rgb(202, 230, 240);
+    
+    transition: all .2s ease-in-out;
+}
+#empty-list-filler p{
+    margin: 10px 25px;
 }
