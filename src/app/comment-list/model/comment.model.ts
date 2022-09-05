@@ -3,13 +3,14 @@ export class Comment {
     author: string;
     text: string;
     timestamp: Date;
+    post_id: number|string;
 
     constructor(obj?: any) {
-        this._id = obj && obj._id || null;
-        this.author = obj && obj.author || null;
+        this._id = obj && obj.id || null;
+        this.author = obj && obj.authorDisplayName || null;
         this.text = obj && obj.text || null;
-        this.timestamp = obj && obj.timestamp || null;
-    
+        this.timestamp = obj && new Date(obj.timestamp).toLocaleDateString() || null;
+        this.post_id = obj && obj.postId || null;
     }
 
 }

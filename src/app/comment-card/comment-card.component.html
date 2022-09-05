@@ -5,11 +5,11 @@
 <app-karma></app-karma>
 
 <div id="comment">
-    <p>{{_comment._id}}</p>
-    <p>{{_comment.author}}</p>
+    <p>by {{_comment.author}}</p>
+    <p>on {{_comment.timestamp}}</p>
     <br/>
     <p>{{_comment.text}}</p>
-    <p>{{_comment.timestamp}}</p>
+    <p></p>
     <a href="replies/{{_comment._id}}" id="replies-btn">Replies</a>
 
     <br><br>

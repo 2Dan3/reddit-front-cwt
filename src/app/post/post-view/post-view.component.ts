@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/api/api.service';
 import { Post } from 'src/app/posts/model/post';
 import { PostService } from 'src/app/posts/services/post.service';
 
@@ -14,12 +15,27 @@ export class PostViewComponent implements OnInit {
   post! :Post;
 
   constructor(private route: ActivatedRoute,
-    private postService: PostService) { }
+    private postService: PostService,
+    private apiService: ApiService,
+    )
+    {
+      const currentId = this.route.snapshot.params['id'];
+      this.apiService.get("/posts/" + currentId)
+      .subscribe(
+        (res) => {
+          this.post = new Post(res);
+          console.log(this.post);
+        },
+        (_error) => {
+          console.log(JSON.stringify(_error));
+
+        }
+      );
+
+     }
 
   ngOnInit(): void {
-    this.post = new Post();
-    const currentId = this.route.snapshot.params['id'];
-    this.post = this.postService.findById(currentId);
+    // 
   }
 
 }
