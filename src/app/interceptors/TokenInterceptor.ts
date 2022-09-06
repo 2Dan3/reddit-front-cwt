@@ -18,12 +18,15 @@ export class TokenInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
     if (this.authService.isTokenPresent()) {
+      console.log("Request to API intercepted; authToken: " + this.authService.getToken() );
+      console.log("REQ Value: " + JSON.stringify(request));
       request = request.clone({
         setHeaders: {
           Authorization: `Bearer ${this.authService.getToken()}` 
         }
       });
     }
+    
     return next.handle(request);
   }
 }

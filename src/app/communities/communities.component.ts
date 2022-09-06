@@ -32,8 +32,8 @@ export class CommunitiesComponent implements OnInit {
           this.communities.push(new Community(res_obj));
         }
         // console.log("response status;" + res['status']);
-        console.log("Result:" +JSON.stringify(res));
-        console.log("communities upon data arrival: ", this.communities);
+        // console.log("Result:" +JSON.stringify(res));
+        // console.log("communities upon data arrival: ", this.communities);
       },
       (_error: any) => {
         console.log("Error caught  " + _error);

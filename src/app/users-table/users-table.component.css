@@ -1,5 +1,6 @@
 .table{
     margin: auto;
+    min-height: 85vh;
     width: 98%;
     border: 3px solid #1A258D;
     border-radius: 3px;

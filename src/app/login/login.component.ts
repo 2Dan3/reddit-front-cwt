@@ -29,10 +29,7 @@ export class LoginComponent implements OnInit {
   login() {
       // this.notification = undefined;
       console.log("Entered login()!");
-      // if (document.getElementById("pw")?.innerText == document.getElementById("repeated-pw")?.innerText) {
-      //   window.alert("Passwords do not match!");
-      //   console.log("Passwords do not match!");
-      // }
+      
       // this.submitted = true;
       console.log(this.loginForm.value);
       this.authService.login(this.loginForm.value)
