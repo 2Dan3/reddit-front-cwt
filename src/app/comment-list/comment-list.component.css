@@ -34,3 +34,7 @@
     background-image: radial-gradient(#2f42eb, #0a00305e);
     transition: all .4s ease-in-out;
 }
+
+#comment-form{
+    margin-left: 20px;
+}

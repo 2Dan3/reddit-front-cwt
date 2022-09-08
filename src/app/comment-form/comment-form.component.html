@@ -1,0 +1,9 @@
+<!-- <p>comment-form works!</p> -->
+
+<div id="comment-form-wrapper">
+    <form (submit)="this.saveComment()" class="form-area" [formGroup]="comment_form">
+        <textarea formControlName="content" name="content-text" id="content" placeholder="Leave a comment..." maxlength="150" required></textarea>
+        <button [hidden]="this.comment_form.invalid" class="btn" id="btn-submit" type="submit">post!</button>
+        <!-- <button class="btn" id="btn-cancel">cancel</button> -->
+    </form>
+</div>

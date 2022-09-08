@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api/api.service';
+import { AuthService } from '../auth/auth.service';
 import { Comment } from './model/comment.model';
 import { CommentService } from './services/comment.service';
 
@@ -12,6 +13,7 @@ import { CommentService } from './services/comment.service';
 export class CommentListComponent implements OnInit {
 
   comments: Comment[] = [];
+  private form_visibility = false;
 
   @Input()
   post_id! :string|number;
@@ -20,6 +22,7 @@ export class CommentListComponent implements OnInit {
     private commentService: CommentService,
     private route: ActivatedRoute,
     private apiService: ApiService,
+    protected authService: AuthService,
     )
     {
       this.apiService.get("/posts/"+ this.route.snapshot.params['id'] + "/comments")
@@ -40,6 +43,18 @@ export class CommentListComponent implements OnInit {
 
   ngOnInit(): void {
     this.comments = this.commentService.getAll();
+  }
+
+  protected showForm(){
+    this.form_visibility = true;
+  }
+
+  protected hideForm(){
+    this.form_visibility = false;
+  }
+
+  protected isFormActive(){
+    return this.form_visibility == true;
   }
 
 }

@@ -1,5 +1,9 @@
-<p id="create-btn">make a comment!</p>
+<!-- <p id="create-btn" [hidden]="isFormActive()" (click)="this.showForm()">make a comment!</p> -->
+
+
 
 <div id="list-container">
+    <app-comment-form id="comment-form" *ngIf="this.authService.isTokenPresent()"></app-comment-form>
+    
     <app-comment-card [_comment]="comment" *ngFor="let comment of comments"></app-comment-card>
 </div>
