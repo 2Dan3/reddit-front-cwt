@@ -26,6 +26,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CommunityFormComponent } from './community-form/community-form.component';
 import { TokenInterceptor } from './interceptors/TokenInterceptor';
 import { CommentFormComponent } from './comment-form/comment-form.component';
+import { PostFormComponent } from './post-form/post-form.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { CommentFormComponent } from './comment-form/comment-form.component';
     RulesComponent,
     NavBarComponent,
     CommunityFormComponent,
-    CommentFormComponent
+    CommentFormComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@
 
 <br/>
 
-<app-karma></app-karma>
+<app-karma (triggeredReaction)="saveCommentReaction($event)"></app-karma>
 
 <div id="comment">
     <p>by {{_comment.author}}</p>

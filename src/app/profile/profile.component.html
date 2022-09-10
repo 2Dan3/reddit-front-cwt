@@ -1,20 +1,45 @@
-<p>profile works!</p>
+<!-- <p>profile works!</p> -->
 
-<div id="container">
-    <p id="karma-paragraph">Total karma: {{this.total_karma_points}}</p>
-    <div id="img-container">
-        <img (click)="choosePic()" id="profile-img" src="../../assets/reddit-logo-icon.png" alt="Profile Pic"/>
-        <label for="description">Description:</label>
-        <textarea id="description" class="editable" maxlength="110"></textarea>
+<div id="content">
+    <br><br><br><br>
+    <div id="forms-container">
 
-        <label for="display-name">Alias:</label>
-        <input id="display-name" class="editable" minlength="3" maxlength="20"/>
+        <div id="karma-img-wrapper">
+            <img (click)="choosePic()" id="profile-img" src="../../assets/reddit-logo-icon.png" alt="Profile Pic"/>
+            <p id="karma-paragraph">Total karma: {{this.total_karma_points}}</p>
+        </div>
 
-        <button id="save-changes">Save changes</button>
+        <div class="form-wrapper">
+            <form class="form-area" (submit)="changeData()" [formGroup]="data_form">
+                
+                <label for="description">Description:</label>
+                <textarea id="description" class="editable" maxlength="110" formControlName="description"></textarea>
 
-        <!-- <button (click)="unhideForm()" id="change-password-btn"></button> -->
-        <button id="change-password-btn">Change password</button>
+                <label for="display-name">Alias:</label>
+                <input id="display-name" type="text" class="editable" maxlength="19" formControlName="displayName" required/>
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" class="editable" maxlength="30" formControlName="email"/>
+
+                <button *ngIf="data_form.valid" type="submit" id="save-changes">Edit data</button>
+            </form>
+        </div>
+
+        <div class="form-wrapper">
+            <form class="form-area" (submit)="changePassword()" [formGroup]="password_form">
+                
+                <label for="current_password">Current password:</label>
+                <input id="current_password" type="password" class="editable" formControlName="oldPass"/>
+                <small *ngIf="non_matching_pw==true">*Does not match your old password</small>
+
+                <label for="new_password">New password:</label>
+                <input id="new_password" type="password" class="editable" minlength="8" formControlName="newPass" placeholder="min. 8 characters"/>
+
+                <!-- <button (click)="unhideForm()" id="change-password-btn"></button> -->
+                <button *ngIf="password_form.valid" id="change-password-btn">Change password</button>
+            </form>
+        </div>
+
     </div>
-    <br><br>
-    
+<br><br><br><br>
 </div>

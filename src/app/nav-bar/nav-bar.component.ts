@@ -23,7 +23,7 @@ export class NavBarComponent implements OnInit {
   }
 
   protected toMyProfilePage() {
-    this.router.navigate(['/profile/1']);
+    this.router.navigate(['/profile']);
   }
 
   protected toHome(){

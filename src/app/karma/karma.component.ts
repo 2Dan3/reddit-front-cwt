@@ -1,4 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ApiService } from '../api/api.service';
+
+
 
 @Component({
   selector: 'app-karma',
@@ -7,17 +10,38 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class KarmaComponent implements OnInit {
 
+  protected reaction_downvote = "DOWNVOTE";
+  protected reaction_upvote = "UPVOTE";
+
   @Input()
   upvote_count!: number;
   @Input()
   downvote_count!: number;
 
-  constructor() { }
+  @Input()
+  total_karma!: number | string;
+  @Output()
+  triggeredReaction : EventEmitter<string>;
+
+  constructor(
+    private apiService: ApiService,
+
+  )
+  {
+    this.triggeredReaction = new EventEmitter();
+
+  }
 
   ngOnInit(): void {
     // TODO*: delete - temporary mock-data:
     this.upvote_count = 380;
     this.downvote_count = 23;
+  }
+
+  protected saveReaction(reaction_type: string) {
+
+    this.triggeredReaction.emit(reaction_type);
+    
   }
 
 

@@ -1,63 +1,118 @@
 *{
     color: white;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bold;
 }
 
+#karma-img-wrapper{
+    margin: 2% 2% 0 4%;
+    width: fit-content;
+}
+
+
 #karma-paragraph{
-    margin: 20px;
+    margin: 50px 7% 0;
     font-style: italic;
     text-decoration: underline;
 }
 
-#container{
+#content{
     background-image: url(../../assets/bg_nebula_2.png);
-    /* background-size: cover; */
+    background-size: cover;
     border-radius: 3px;
 }
 
-#img-container{
-    width: 94%;
-    height: 50vh;
+#forms-container{
+    display: flex;
+    flex-wrap: nowrap;
+    
+    width: 80%;
+    height: 55vh;
     border: 2px #FFFFFF solid;
     border-radius: 30px;
-    margin: auto;
+    margin: 15px auto;
 }
 
-#img-container:hover{
-    border-color: #fc581c;
-    cursor: pointer;
-}
-
-img{
-    min-width: 80px;
-    max-width: 100px;
-    min-height: 80px;
-    max-height: 100px;
+#profile-img{
+    min-width: 180px;
+    max-width: 200px;
+    min-height: 180px;
+    max-height: 200px;
     border-radius: 50%;
-    margin: 20px;
+    margin: 7% 2% 2%;
+    padding: 1px;
+    border: 1px solid whitesmoke;
+}
+#profile-img:hover{
+    cursor: pointer;
+    border: 1px solid #fc581c;
+    padding: 2px;
+    transition: all .1s ease-in-out;
 }
 
-#description{
-    height: 15vh;
-    resize: none;
+
+.form-wrapper{
+    background-color: rgba(245, 245, 245, 0.137);
+    /* display: block; */
+    margin: auto 8%;
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+    width: auto;
+}
+
+.form-wrapper:hover, .form-wrapper:focus{
+    /* border: 1px solid #fc581c60; */
+    background-color: rgba(245, 245, 245, 0.171);
+}
+
+.form-wrapper *{
+    /* text-align: center; */
+    display: block;
+    margin: 3% auto;
+    text-align: center;
 }
 
 label{
-    margin-right: 1%;
+    width: 90%;
 }
+
+.editable{
+    width: 90%;
+    color: #fc581c;
+    font-style: italic;
+}
+
+.editable::selection{
+    color: gray;
+}
+
+#description{
+    height: 16vh;
+    resize: none;
+    text-align: left;
+}
+
+small{
+    color: rgb(231, 1, 1);
+    font-size: 22px;
+    background-color: rgba(245, 245, 245, 0.445);
+    width: 90%;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+}
+
 #description, #display-name{
-    background-image: linear-gradient(to bottom right, #a7b1fc, #ffffff);
-    margin-right: 3%;
+    background-color: whitesmoke;
 }
 
 #save-changes, #change-password-btn{
-    margin-right: 1%;
     background-image: linear-gradient(to bottom right, #fc581c, rgb(255, 196, 0));
     border: 1px solid black;
 }
 
 #save-changes:hover, #change-password-btn:hover{
+    cursor: pointer;
     border-radius: 7px;
     color: rgb(218, 243, 252);
     transition: all .3s ease-in-out;

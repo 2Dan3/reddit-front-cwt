@@ -17,6 +17,10 @@
     vertical-align: middle;
 }
 
+*::selection, .nav-item a:hover, .nav-item a:focus{
+    color: #1a258d;
+}
+
 .nav-item:hover{
     background-image: linear-gradient(to bottom right, #e8ebff, azure);
     border-radius: 5px;

@@ -1,7 +1,8 @@
 <!-- <p>karma works!</p> -->
 
 <div id="karma-wrapper">
-    <img src="../../assets/arrow_upvote_alt_black.png" alt="Upvote"/>
+    <img (click)="saveReaction(reaction_upvote)" src="../../assets/arrow_upvote_alt_black.png" alt="Upvote"/>
     <p>{{upvote_count-downvote_count}}</p>
-    <img src="../../assets/arrow_downvote_alt_black.png" alt="Downvote"/>
+    <!-- <p>{{total_karma}}</p> -->
+    <img (click)="saveReaction(reaction_downvote)" src="../../assets/arrow_downvote_alt_black.png" alt="Downvote"/>
 </div>
