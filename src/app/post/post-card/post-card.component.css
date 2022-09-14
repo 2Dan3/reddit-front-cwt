@@ -1,3 +1,9 @@
+#wrapper{
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
 
 #post-card p {
     /* width: 100%; */

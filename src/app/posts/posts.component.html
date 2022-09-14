@@ -19,11 +19,11 @@
         </select>
     </div>
     
-    <app-post-form></app-post-form>
+    <app-post-form (createdPost)="savePost($event)" *ngIf="this.authService.isTokenPresent()"></app-post-form>
  
     <app-post-card [post]="p" *ngFor="let p of posts" routerLink="/post/{{p._id}}"></app-post-card>
     
-    <div *ngIf="isPostListEmpty()" id="empty-list-filler">
+    <div (click)="toLoginPage()" *ngIf="isPostListEmpty()" id="empty-list-filler">
         <p>This redditVerse is empty.</p>
         <p>Be the first to post something!</p>
     </div>

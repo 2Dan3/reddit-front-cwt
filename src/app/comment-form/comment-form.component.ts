@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -10,21 +10,26 @@ export class CommentFormComponent implements OnInit {
 
   protected comment_form : FormGroup;
 
+  @Output()
+  createdComment: EventEmitter<any>;
+
   constructor(
     private formBuilder: FormBuilder,
   ) 
   {
     this.comment_form = this.formBuilder.group({
-      "content": ['', Validators.compose([Validators.required])],
+      "text": ['', Validators.compose([Validators.required])],
     });
   
+    this.createdComment = new EventEmitter();
   }
 
   ngOnInit(): void {
   }
 
-  protected saveComment(){
-
+  protected saveComment(commentObj : any){
+    this.createdComment.emit(commentObj);
+    this.comment_form.reset();
   }
 
   

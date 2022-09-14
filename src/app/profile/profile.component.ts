@@ -26,6 +26,12 @@ export class ProfileComponent implements OnInit {
   {
     this.setKarmaPoints();
 
+    this.data_form = this.formBuilder.group({
+      "description": ['', Validators.compose([])],
+      "displayName": ['', Validators.compose([Validators.required])],
+      "email": ['', Validators.compose([Validators.required, Validators.email])],
+    }
+)
     this.apiService.get("/users/whoami")
         .subscribe( 
           (res: any) => {
@@ -38,10 +44,7 @@ export class ProfileComponent implements OnInit {
             console.log(JSON.stringify(_error));
           });
           
-//     this.data_form = new FormGroup(["description": ['', Validators.compose([])],
-//     "displayName": ['', Validators.compose([Validators.required])],
-//     "email": ['', Validators.compose([Validators.required, Validators.email])],]
-// )
+    
 
     this.password_form = this.formBuilder.group({
       "oldPass": ['', Validators.compose([Validators.required])],
@@ -89,13 +92,14 @@ export class ProfileComponent implements OnInit {
             console.log("Password req successful!");
             window.alert("Hooray! Your password change request was successfully processed.");
             // this.router.navigate(['/']);
+            this.password_form.reset();
           },
           (_error: HttpErrorResponse) => {
 
             if (_error.status == 406) {
               this.non_matching_pw = true;
             }
-
+            this.password_form.reset();
             console.log(JSON.stringify(_error));
             // this.router.navigate(['/']);
           });

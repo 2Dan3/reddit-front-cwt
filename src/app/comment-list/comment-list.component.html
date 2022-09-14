@@ -3,7 +3,7 @@
 
 
 <div id="list-container">
-    <app-comment-form id="comment-form" *ngIf="this.authService.isTokenPresent()"></app-comment-form>
+    <app-comment-form (createdComment)="saveComment($event)"  id="comment-form" *ngIf="this.authService.isTokenPresent()"></app-comment-form>
     
     <app-comment-card [_comment]="comment" *ngFor="let comment of comments"></app-comment-card>
 </div>

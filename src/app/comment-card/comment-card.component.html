@@ -1,16 +1,17 @@
 <!-- <p>comment-card works!</p> -->
 
 <br/>
+<div id="wrapper">
+    <app-karma [total_karma]="_comment.karma_points" (triggeredReaction)="saveCommentReaction($event)"></app-karma>
 
-<app-karma (triggeredReaction)="saveCommentReaction($event)"></app-karma>
+    <div id="comment">
+        <p>by {{_comment.author}}</p>
+        <p>on {{_comment.timestamp}}</p>
+        <br/>
+        <p>{{_comment.text}}</p>
+        <p></p>
+        <a href="replies/{{_comment._id}}" id="replies-btn">Replies</a>
 
-<div id="comment">
-    <p>by {{_comment.author}}</p>
-    <p>on {{_comment.timestamp}}</p>
-    <br/>
-    <p>{{_comment.text}}</p>
-    <p></p>
-    <a href="replies/{{_comment._id}}" id="replies-btn">Replies</a>
-
-    <br><br>
+        <br><br>
+    </div>
 </div>

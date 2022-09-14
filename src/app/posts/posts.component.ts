@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../api/api.service';
+import { AuthService } from '../auth/auth.service';
 import { Post } from './model/post';
 import { PostService } from './services/post.service';
 
@@ -20,6 +21,9 @@ export class PostsComponent implements OnInit {
     private postService : PostService,
     private apiService : ApiService,
     private route : ActivatedRoute,
+    protected authService: AuthService,
+    private router: Router,
+
     ) 
     {
         console.log("from posts component, community_id: " + route.snapshot.params['id']);
@@ -75,6 +79,28 @@ export class PostsComponent implements OnInit {
 
   protected isPostListEmpty(){
     return this.posts.length == 0;
+  }
+
+  protected savePost(postObj:any){
+    this.apiService.post("/communities/"+ this.route.snapshot.params['id'] +"/posts", postObj)
+      .subscribe(
+        (res) => {
+          window.alert("You've successfully posted!");
+        },
+        (_error) => {
+          console.log(JSON.stringify(_error));
+        }
+      );
+  }
+
+  protected toLoginPage(){
+    if(!this.authService.isTokenPresent) {
+
+      if (window.confirm("Sign in to be able to participate!") == true){
+      this.router.navigate(['login']);
+      }
+    }
+    
   }
   
 }

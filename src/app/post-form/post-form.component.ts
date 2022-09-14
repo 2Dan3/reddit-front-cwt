@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -9,23 +9,28 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class PostFormComponent implements OnInit {
 
   protected post_form: FormGroup;
+  @Output()
+  createdPost: EventEmitter<any>;
 
   constructor(
     private formBuilder: FormBuilder,
     
   )
   {
+    this.createdPost = new EventEmitter();
+
     this.post_form = this.formBuilder.group({
       "title": ['', Validators.compose([Validators.required])],
-      "content": ['', Validators.compose([Validators.required])],
+      "text": ['', Validators.compose([Validators.required])],
     });
    }
 
   ngOnInit(): void {
   }
 
-  protected savePost(){
-    // TODO*
+  protected savePost(postObj: any){
+    this.createdPost.emit(postObj);
+    this.post_form.reset();
   }
 
 }

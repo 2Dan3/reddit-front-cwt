@@ -1,9 +1,12 @@
 <!-- <p>post works!</p> -->
 <br/>
-<div id="post-card">
-    <p>by {{this.post.author_display_name}}</p>
-    <p>on {{this.post.creation_date}}</p>
-    <br/>
-    <p>[Title] {{post.title}}</p>
-    <p>{{post.text}}</p>
+<div id="wrapper">
+    <app-karma [total_karma]="post.total_karma" (triggeredReaction)="savePostReaction($event)"></app-karma>
+    <div id="post-card">
+        <p>by {{this.post.author_display_name}}</p>
+        <p>on {{this.post.creation_date}}</p>
+        <br/>
+        <p>[Title] {{post.title}}</p>
+        <p>{{post.text}}</p>
+    </div>
 </div>

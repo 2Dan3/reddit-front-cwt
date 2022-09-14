@@ -67,6 +67,7 @@ export class RegisterComponent implements OnInit {
           if (_error['status'] == 406) {
             window.alert("Username and/or email you've entered were already taken. Try another one!");
           }
+          this.registerForm.reset();
           // this.notification = {msgType: 'error', msgBody: 'Incorrect username or password.'};
         });
   }

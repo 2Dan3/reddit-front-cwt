@@ -24,25 +24,37 @@ export class CommentCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  protected saveCommentReaction(reaction_type: string) {
+  protected saveCommentReaction(reaction_type: any) {
     console.log("From comment card, id: " + this._comment._id);
 
-    this.apiService.post("/comments/" + this._comment._id +"/reactions", { "ReactionType" : reaction_type} )
+    this.apiService.post("/comments/" + this._comment._id +"/reactions", reaction_type )
         .subscribe( 
           (res: any) => {
             console.log("Reaction to comment submitted!");
             window.alert("Your Reaction was submitted!");
-            // TODO* ++ or -- the karma
+
+            this.getCommentKarma(this._comment._id);
           },
           (_error: HttpErrorResponse) => {
 
             if (_error.status == 406) {
-              window.alert("You've already "+ reaction_type.toLowerCase() + "ed this!");
+              window.alert("You've already "+ reaction_type.type.toLowerCase() + "d this!");
             }
             
-            // this.submitted = false;
             console.log(_error);
-            // this.notification = {msgType: 'error', msgBody: 'Incorrect username or password.'};
+          });
+  }
+
+  private getCommentKarma(commentId: number){
+    this.apiService.get("/comments/" + commentId +"/karma")
+        .subscribe( 
+          (res: any) => {
+            console.log(res);
+
+            this._comment.karma_points = res;
+          },
+          (_error: HttpErrorResponse) => {
+            console.log(_error);
           });
   }
 

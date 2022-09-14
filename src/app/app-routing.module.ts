@@ -20,8 +20,6 @@ const routes: Routes = [
   {path: "login", component: LoginComponent},
   {path: "replies/:parent_id", component: ReplyListComponent},
   {path: "users", component: UsersTableComponent},
-  {path: "add_community", component: CommunityFormComponent},
-  {path: "add_post", component: PostFormComponent},
 ];
 
 @NgModule({

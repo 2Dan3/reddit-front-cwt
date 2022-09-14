@@ -1,6 +1,9 @@
-/* #wrapper{
-    display: inline;
-} */
+#wrapper{
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
 
 #comment{
     background-image: linear-gradient(to bottom right, #ffffff, #e6e6e6);

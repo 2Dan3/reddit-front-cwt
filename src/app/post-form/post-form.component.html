@@ -1,9 +1,9 @@
 <!-- <p>post-form works!</p> -->
 
 <div id="post-form-wrapper">
-    <form (submit)="this.savePost()" class="form-area" [formGroup]="post_form">
+    <form (submit)="this.savePost(this.post_form.value)" class="form-area" [formGroup]="post_form">
         <input formControlName="title" name="title" id="title" placeholder="[Title]" type="text"/>
-        <textarea formControlName="content" name="content-text" id="content" placeholder="Post text..." maxlength="200" required></textarea>
+        <textarea formControlName="text" name="content-text" id="content" placeholder="Post text..." maxlength="200" required></textarea>
         <button [hidden]="this.post_form.invalid" class="btn" id="btn-submit" type="submit">post!</button>
         <!-- <button class="btn" id="btn-cancel">cancel</button> -->
     </form>
