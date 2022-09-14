@@ -1,6 +1,6 @@
 #post-form-wrapper{
     border-radius: 3px;
-    width: 60%;
+    width: 70%;
     height: fit-content;
     background-color: whitesmoke;
     margin: 10px auto 10px 7%;
@@ -16,10 +16,21 @@
     font-size: x-large;
     font-style: italic;
     font-weight: bold;
-    width: 50%;
-    min-height: 10px;
-    height: 50px;
+    min-height: 50px;
+    height: 60px;
+}
+
+#content{
     resize: none;
+    width: 80%;
+}
+#title{
+    width: 20%;
+}
+
+#content::selection, #title::selection{
+    color: #fc581c;
+    background-color: rgba(255, 255, 255, 0.671);
 }
 
 .btn{
@@ -32,7 +43,7 @@
     font-size: large;
     font-weight: bold;
     color: white;
-    margin: auto 5px;
+    margin: auto 1px;
 }
 .btn:hover{
     text-decoration: underline;
