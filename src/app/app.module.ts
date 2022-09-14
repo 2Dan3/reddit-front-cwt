@@ -27,6 +27,7 @@ import { CommunityFormComponent } from './community-form/community-form.componen
 import { TokenInterceptor } from './interceptors/TokenInterceptor';
 import { CommentFormComponent } from './comment-form/comment-form.component';
 import { PostFormComponent } from './post-form/post-form.component';
+import { CommunitySuspensionFormComponent } from './community-suspension-form/community-suspension-form.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { PostFormComponent } from './post-form/post-form.component';
     NavBarComponent,
     CommunityFormComponent,
     CommentFormComponent,
-    PostFormComponent
+    PostFormComponent,
+    CommunitySuspensionFormComponent
   ],
   imports: [
     BrowserModule,

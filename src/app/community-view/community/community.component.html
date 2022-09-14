@@ -1,14 +1,21 @@
 <!-- <p>Community with id: {{community._id}} works!</p> -->
-
+<!-- <div id="suspension-form-wrapper">
+    
+</div> -->
 <div id="community-overview-wrapper">
     <div class="flair-list-wrapper">
         <app-flair-list id="flairs-component"> </app-flair-list>
 
         <app-rules id="rules-component" [rules]="rules"></app-rules>
     </div>
+
+    <community-suspension-form></community-suspension-form>
+
+
     <div class="posts-list-wrapper">
         <app-posts [community_id]="community._id"></app-posts>
     </div>
+    
     
 
 </div>

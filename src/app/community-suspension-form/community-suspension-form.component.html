@@ -1,0 +1,9 @@
+<!-- <p>community-suspension-form works!</p> -->
+
+<div id="suspension-form-wrapper">
+    <form (submit)="this.suspendCommunity()" class="form-area" [formGroup]="suspension_form">
+        <textarea formControlName="suspensionReason" name="content-text" id="content" placeholder="Wish to suspend this community? Provide the reason for suspension..." maxlength="150" required></textarea>
+        <button [hidden]="this.suspension_form.invalid" class="btn" id="btn-submit" type="submit">suspend</button>
+        <!-- <button class="btn" id="btn-cancel">cancel</button> -->
+    </form>
+</div>
