@@ -15,6 +15,7 @@ export class ProfileComponent implements OnInit {
   protected password_form: FormGroup;
 
   protected non_matching_pw = false;
+  protected email_taken = false;
 
   protected total_karma_points = 0;
 
@@ -109,15 +110,17 @@ export class ProfileComponent implements OnInit {
     this.apiService.put("/users/edit", this.data_form.value)
         .subscribe( 
           (res: any) => {
+            this.email_taken = false;
             console.log("Data edit req successful!");
             window.alert("Your data was successfully edited!");
             // this.router.navigate(['/']);
           },
           (_error: HttpErrorResponse) => {
 
-            // if (_error.status == 406) {
-              window.alert("An error happened while editing your data.")
-            // }
+            if (_error.status == 406) {
+              // window.alert("The input email is already taken.");
+              this.email_taken = true;
+            }
 
             console.log(JSON.stringify(_error));
             // this.router.navigate(['/']);

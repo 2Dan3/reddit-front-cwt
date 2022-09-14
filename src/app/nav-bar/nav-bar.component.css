@@ -6,6 +6,7 @@
     height: 65px;
     border-radius: 3px;
     border: 1px solid lightblue;
+    z-index: 1;
 }
 
 .nav-item{

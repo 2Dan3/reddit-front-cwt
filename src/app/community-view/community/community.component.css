@@ -36,7 +36,7 @@
     /* ! ! ! "max-height" FIXATES THE MAX-HEIGHT LOGICALLY (FOR BELOW CONTENT MARGIN REASONS), BUT STILL KEEPS THE FULL HEIGHT DISPLAY OF ITS CONTENT
             MEANING IT NOW PROPERLY OVERLAPS WITH THE NON-USABLE BELOW SPACE ! ! ! */
     max-height: 175px;
-    z-index: 1;
+    z-index: 0;
 }
 
 #flairs-component{

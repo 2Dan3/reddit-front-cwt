@@ -3,22 +3,22 @@
     width: 60%;
     height: fit-content;
     background-color: whitesmoke;
-    margin: 10px auto 10px 73px;
+    margin: 10px auto 10px 7%;
 }
 
 #post-form-wrapper *{
     margin: 1%;
 }
 
-#content, title{
+#content, #title{
     text-align: start;
     background-color: lightgray;
     font-size: x-large;
     font-style: italic;
     font-weight: bold;
-    width: 90%;
+    width: 50%;
     min-height: 10px;
-    height: fit-content;
+    height: 50px;
     resize: none;
 }
 

@@ -20,6 +20,7 @@
 
                 <label for="email">Email:</label>
                 <input id="email" type="email" class="editable" maxlength="30" formControlName="email"/>
+                <small *ngIf="email_taken==true">*The email you tried to register is already taken.</small>
 
                 <button *ngIf="data_form.valid" type="submit" id="save-changes">Edit data</button>
             </form>
