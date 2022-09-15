@@ -3,5 +3,5 @@
 <div id="container">
     <app-post-card [post]="this.post"></app-post-card>
 
-    <app-comment-list [post_id]="this.post._id"></app-comment-list>
+    <app-comment-list [comments]="this.comments" (triggeredSaveComment)="saveIndependentComment($event)" [post_id]="this.post._id"></app-comment-list>
 </div>

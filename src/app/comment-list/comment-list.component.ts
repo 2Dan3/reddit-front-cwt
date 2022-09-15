@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../api/api.service';
 import { AuthService } from '../auth/auth.service';
@@ -12,7 +12,11 @@ import { CommentService } from './services/comment.service';
 })
 export class CommentListComponent implements OnInit {
 
-  comments: Comment[] = [];
+  @Output()
+  private triggeredSaveComment: EventEmitter<any>;
+  @Input()
+  comments!: Comment[];
+
   private form_visibility = false;
 
   @Input()
@@ -27,25 +31,28 @@ export class CommentListComponent implements OnInit {
 
     )
     {
+      this.triggeredSaveComment = new EventEmitter();
+
       // console.log(this.post_id);
-      this.apiService.get("/posts/"+ this.route.snapshot.params['id'] + "/comments")
-      .subscribe(
-        (res) => {
-          this.comments = [];
+      // this.apiService.get("/posts/"+ this.route.snapshot.params['id'] + "/comments")
+      // .subscribe(
+      //   (res) => {
+      //     this.comments = [];
 
-          for(let res_obj of res) {
-            this.comments.push(new Comment(res_obj));
-          }
+      //     for(let res_obj of res) {
+      //       this.comments.push(new Comment(res_obj));
+      //     }
 
-        },
-        (_error) => {
-          console.log(JSON.stringify(_error));
-        }
-      );
+      //   },
+      //   (_error) => {
+      //     console.log(JSON.stringify(_error));
+      //   }
+      // );
      }
 
   ngOnInit(): void {
-    this.comments = this.commentService.getAll();
+    // MOCK DATA - TODO*: delete
+    // this.comments = this.commentService.getAll();
   }
 
   protected showForm(){
@@ -61,18 +68,7 @@ export class CommentListComponent implements OnInit {
   }
 
   protected saveComment(commentObj : any){
-    //  TODO* remove the URL's Trailing "1"
-    this.apiService.post("/posts/"+ this.route.snapshot.params['id'] + "/comments/1", commentObj)
-      .subscribe(
-        (res) => {
-          this.post_id = this.route.snapshot.params['id'];
-          // window.location.reload();
-
-        },
-        (_error) => {
-          console.log(JSON.stringify(_error));
-        }
-      );
+    this.triggeredSaveComment.emit(commentObj);
   }
 
 }

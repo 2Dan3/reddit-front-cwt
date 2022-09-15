@@ -86,6 +86,7 @@ export class PostsComponent implements OnInit {
       .subscribe(
         (res) => {
           window.alert("You've successfully posted!");
+          window.location.reload();
         },
         (_error) => {
           console.log(JSON.stringify(_error));

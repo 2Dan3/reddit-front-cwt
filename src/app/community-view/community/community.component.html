@@ -9,8 +9,7 @@
         <app-rules id="rules-component" [rules]="rules"></app-rules>
     </div>
 
-    <community-suspension-form></community-suspension-form>
-
+    <community-suspension-form *ngIf="this.isAdmin()"></community-suspension-form>
 
     <div class="posts-list-wrapper">
         <app-posts [community_id]="community._id"></app-posts>

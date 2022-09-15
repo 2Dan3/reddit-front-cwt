@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -61,11 +62,14 @@ export class RegisterComponent implements OnInit {
             this.router.navigate(['/login']);
           // }
         },
-        (_error: any) => {
+        (_error: HttpErrorResponse) => {
           this.submitted = false;
           console.log("Error caught;" + _error);
-          if (_error['status'] == 406) {
-            window.alert("Username and/or email you've entered were already taken. Try another one!");
+          if (_error.status == 406) {
+            window.alert("Username and/or email you entered were already taken. Try another one!");
+          }
+          if (_error.status == 400) {
+            window.alert("The Email you entered isn't in valid format.")
           }
           this.registerForm.reset();
           // this.notification = {msgType: 'error', msgBody: 'Incorrect username or password.'};
